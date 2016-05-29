@@ -1,0 +1,25 @@
+{
+  "name": "starter-node-angular",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.4.2",
+    "express": "^4.5.1",
+    "method-override": "~2.0.2",
+    "mongoose": "~3.8.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "1.0.0",
+  "description": "whatever",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "whatever"
+  },
+  "keywords": [
+    "whatever"
+  ],
+  "author": "saad and ali",
+  "license": "ISC"
+}
