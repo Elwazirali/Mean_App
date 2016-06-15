@@ -5,6 +5,7 @@
 angular.module('sampleApp',
     [
         'ngRoute',
+        'ngMaterial',
         'appRoutes',
         'MainCtrl',
         'NerdCtrl',

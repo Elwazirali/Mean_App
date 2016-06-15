@@ -2,7 +2,7 @@
  * Created by Ali on 2016-05-28.
  */
 // public/js/appRoutes.js
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('appRoutes', []).config(['$routeProvider', function($routeProvider) {
 
     $routeProvider
 
@@ -21,8 +21,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
         .when('/playground', {
             templateUrl: 'views/playground.html',
             controller: 'playgroundController as vm'
-        });
+        })
+        .otherwise({redirectTo:'#/'});
 
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 
 }]);

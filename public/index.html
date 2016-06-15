@@ -10,10 +10,16 @@
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="libs/animate.css/animate.css">
+    <link rel="stylesheet" href="libs/angular-material/angular-material.css">
 
     <!-- JS -->
     <script src="libs/angular/angular.min.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
+    <script src="libs/animate.css/gulpfile.js"></script>
+    <script src="libs/angular-animate/angular-animate.js"></script>
+    <script src="libs/angular-aria/angular-aria.js"></script>
+    <script src="libs/angular-material/angular-material.js"></script>
 
     <!-- ANGULAR CUSTOM -->
     <script src="js/controllers/MainCtrl.js"></script>
@@ -28,22 +34,38 @@
 <div class="container">
 
     <!-- HEADER -->
-    <nav class="navbar navbar-inverse">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">Stencil: Node and Angular</a>
+
+    <md-toolbar class="md-primary">
+        <div layout="row" layout-padding layout-align="space-between center">
+            <div>
+                <md-button href="#/nerds" class="md-raised">Nerds</md-button>
+                <md-button class="md-raised" href="#/playground">The Playground</md-button>
+                <md-button class="md-raised" href="/">Home</md-button>
+                <md-menu>
+                    <md-button class="md-raised" ng-click="$mdOpenMenu()">Help</md-button>
+                    <md-menu-content width="2">
+                        <md-menu-item>
+                            <md-button>Help</md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button>About</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="nav-buttons">
+                <md-button class="md-raised md-accent">My profile</md-button>
+                <md-button class="md-raised md-warn">Log Out</md-button>
+            </div>
+
+            <!-- ANGULAR DYNAMIC CONTENT -->
+            <div ng-view></div>
+
         </div>
 
-        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
-        <ul class="nav navbar-nav">
-            <li><a href="/nerds">Nerds</a></li>
-            <li><a href="/playground">The Playground</a></li>
-        </ul>
-    </nav>
+    </md-toolbar>
 
-    <!-- ANGULAR DYNAMIC CONTENT -->
-    <div ng-view></div>
 
-</div>
 
 </body>
 </html>

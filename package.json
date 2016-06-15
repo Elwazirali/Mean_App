@@ -12,7 +12,9 @@
   },
   "version": "1.0.0",
   "description": "whatever",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
   "repository": {
     "type": "git",
     "url": "whatever"
